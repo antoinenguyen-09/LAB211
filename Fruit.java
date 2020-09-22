@@ -1,13 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 import java.util.ArrayList;
-/**
- *
- * @author ASUS
- */
+
 public class Fruit {
     private int fruitID;
     private int quantity;
@@ -92,9 +84,5 @@ class FruitList extends ArrayList<Fruit>{
                 System.out.printf("%-10d%-20s%-20s%-15.0f$\n", countItem++,fruit.getfr_name(), fruit.getOrigin(), fruit.getPrice());
             }
         } 
-    }
-    
-    
+    }   
 }
-
-
