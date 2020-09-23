@@ -45,16 +45,21 @@ public class BinarySearch {
     }
     
     public static void main(String[] args){
-         BinarySearch ob = new BinarySearch();
+         BinarySearch bs = new BinarySearch();
          int arr_size, searchValue;
-         arr_size= Utility.getInt("Enter number of array: ");
-         searchValue = Utility.getInt("Enter search value: ");
+         do{
+            arr_size= Utility.getInt("Enter number of array: ");
+         } while(arr_size<=0);
          int arr[] = new int[arr_size];
          for(int i=0; i<arr.length; i++){
              arr[i] = Utility.getRandomInRange(30, 10);
          }
-         ob.sort(arr);
+         bs.sort(arr);
          System.out.println("Sorted array: "+Arrays.toString(arr));
-         System.out.println("Found "+searchValue+" at index: "+ob.binarySearch(arr, searchValue));
+         searchValue = Utility.getInt("Enter search value: ");
+         if(bs.binarySearch(arr, searchValue)!=-1)
+            System.out.println("Found "+searchValue+" at index: "+bs.binarySearch(arr, searchValue));
+         else
+            System.out.println("Value not found!!");
     }
 }
