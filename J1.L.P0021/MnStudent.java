@@ -1,9 +1,6 @@
-import java.util.Scanner;
-
 public class MnStudent {
     static int id=0, semester;
     static String name, course;
-    static Scanner sc = new Scanner(System.in);
     static StudentList st_list = new StudentList();
     
     public static void CreateNewStudent(){
