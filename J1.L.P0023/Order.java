@@ -1,13 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 import java.util.ArrayList;
-/**
- *
- * @author ASUS
- */
+
 public class Order {
     private String fruitName;
     private int quantity;
@@ -66,7 +58,5 @@ class OrderList extends ArrayList<Order>{
             total += order.getPrice() * order.getQuantity();
         }
         System.out.println("Total: " + total);
-    }
-    
-    
+    }   
 }
