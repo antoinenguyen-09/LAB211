@@ -52,10 +52,6 @@ public class Student implements Comparator<Student>{
 }
 class Manager {
 
-    public int createStudent(Student st, ArrayList<Student> st_list){
-        st_list.add(st);
-        return st_list.size();
-    }
     public void findbyName(String name, ArrayList<Student> st_list){
         boolean exist=false;
         for(Student st: st_list){
