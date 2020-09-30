@@ -38,25 +38,3 @@ public class Order {
         this.price = price;
     }
 }
-
-class OrderList extends ArrayList<Order>{
-    
-    public OrderList() {
-        super();
-    }
-    
-    public void adđOrder(Order ord){
-        this.add(ord);
-    }
-    
-    public void displayListOrder() {
-        int id=1;
-        double total = 0;
-        System.out.printf("%15s%15s%15s%15s\n", "Product|", "Quantity|", "Price|", "Amount");
-        for (Order order : this) {
-            System.out.printf("%d.%15s%15d%15.0f$%15.0f$\n", id, order.getFruitName(), order.getQuantity(), order.getPrice(), order.getPrice() * order.getQuantity());
-            total += order.getPrice() * order.getQuantity();
-        }
-        System.out.println("Total: " + total);
-    }   
-}
