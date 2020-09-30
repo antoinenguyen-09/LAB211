@@ -58,31 +58,3 @@ public class Fruit {
         System.out.println(fruitID+"."+fr_name+"\t"+quantity+"\t"+price+"$\t"+price*quantity+"$");
     }
 }
-
-class FruitList extends ArrayList<Fruit>{
-    public FruitList() {
-        super();
-    }
-    
-    public void adđFruit(Fruit fr){
-        this.add(fr);
-    }
-    
-    public void displayCreatedFruit(){
-        for(Fruit fr:this){
-            fr.print();
-        }
-    }
-    
-    public void displayShoppingFruit(){
-        int countItem=1;
-        System.out.println("List of Fruit: ");
-        System.out.printf("%-10s%-20s%-20s%-15s\n", "Item", "Fruit name", "Origin", "Price");
-        for (Fruit fruit : this) {
-            //check shop have item or not 
-            if (fruit.getQuantity() != 0) {
-                System.out.printf("%-10d%-20s%-20s%-15.0f$\n", countItem++,fruit.getfr_name(), fruit.getOrigin(), fruit.getPrice());
-            }
-        } 
-    }   
-}
