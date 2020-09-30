@@ -1,50 +1,29 @@
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class MnFruitShop {
-    public static void main (String[] args){
-        Scanner sc = new Scanner(System.in);
-        int id=0, quantity;
-        double price;
-        String fr_name, origin;
-        FruitList fr_list = new FruitList();
-        OrderList ord_list = new OrderList();
-        Menu mn = new Menu();
-        mn.add("1. Create fruit");
-        mn.add("2. View orders");
-        mn.add("3. Shopping (for buyer)");
-        mn.add("4. Exit");
-        int userChoice;
+    static int id=0, quantity;
+    static double price;
+    static String fr_name, origin;
+    static ArrayList<Fruit> fr_list = new ArrayList<>();
+    static ArrayList<Order> ord_list = new ArrayList<>();
+    
+    public static void createProduct(){
+        boolean loop=true;
         do{
-            mn.print();
-            userChoice = mn.getUserChoices();
-            switch(userChoice){
-                case 1:
-                    boolean loop=true;
-                    do{
-                        id++;
-                        System.out.println("Create a new fruit: ");
-                        fr_name = Utilily.GetString("Enter fruit's name: ", false);
-                        origin = Utilily.GetString("Enter fruit's origin: ", false);
-                        quantity = Utilily.getInt("Enter fruit's quantity: ");
-                        price = Utilily.getDouble("Enter fruit's price: ");
-                        Fruit fr = new Fruit(id, quantity, price, fr_name, origin);
-                        fr_list.adđFruit(fr);
-                        Order ord = new Order(fr_name, quantity, price);
-                        ord_list.add(ord);
-                        if(Utilily.GetYesNo("Do you want to continue (Y/N)?")==false) loop=false;
-                    } while(loop);
-                        fr_list.displayCreatedFruit();
-                    break;
-                case 2:
-                    
-                    break;
-                case 3:
-                    
-                    break;
-                case 4:
-                    System.exit(0);
-                    break;
-            }
-        } while(true);
+            id++;
+            System.out.println("Create a new fruit: ");
+            fr_name = Utilily.GetString("Enter fruit's name: ", false);
+            origin = Utilily.GetString("Enter fruit's origin: ", false);
+            quantity = Utilily.getInt("Enter fruit's quantity: ");
+            price = Utilily.getDouble("Enter fruit's price: ");
+            Fruit fr = new Fruit(id, quantity, price, fr_name, origin);
+            fr_list.add(fr);
+            Order ord = new Order(fr_name, quantity, price);
+            ord_list.add(ord);
+            if(Utilily.GetYesNo("Do you want to continue (Y/N)?")==false) loop=false;
+        } while(loop);
+            fr_list.displayCreatedFruit();
     }
+    
+    
 }
