@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Fruit {
     private int fruitID;
     private int quantity;
