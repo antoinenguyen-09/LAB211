@@ -58,11 +58,14 @@ public class Utilily {
             try
             {
                 i = Integer.parseInt(sc.nextLine());
-                loop = false;
+                if(i<=0){
+                    System.out.println("Invalid input!");
+                    loop = true;
+                } else loop = false;
             }
-            catch(Exception e)
+            catch(NumberFormatException e)
             {
-                System.out.println(e);
+                System.out.println("Need number format!");
                 sc.nextLine();
             }
         }while(loop);
@@ -79,11 +82,14 @@ public class Utilily {
             try
             {
                 i = Double.parseDouble(sc.nextLine());
-                loop = false;
+                if(i<=0){
+                    System.out.println("Invalid input!");
+                    loop = true;
+                } else loop = false;
             }
             catch(NumberFormatException e)
             {
-                System.out.println(e);
+                System.out.println("Need number format!");
                 sc.nextLine();
             }
         }while(loop);
