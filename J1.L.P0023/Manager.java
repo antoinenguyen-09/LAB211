@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Hashtable;
 
 public class Manager {
     public static void displayCreatedFruit(ArrayList<Fruit> fr_list){
@@ -8,24 +7,48 @@ public class Manager {
         }
     }
     
-    public static void displayListOrder(ArrayList<Order> ord_list) {
+    public static void displayOrderList(ArrayList<Order> ord_list) {
         int id=1;
         double total = 0;
-        System.out.printf("%15s%15s%15s%15s\n", "Product|", "Quantity|", "Price|", "Amount");
+        System.out.printf("%15s%15s%15s%15s\n", "Product |", "Quantity |", "Price |", "Amount");
         for (Order order : ord_list) {
-            System.out.printf("%d.%15s%15d%15.0f$%15.0f$\n", id, order.getFruitName(), order.getQuantity(), order.getPrice(), order.getPrice() * order.getQuantity());
+            System.out.printf("%d.%13s%13d%13.0f$%13.0f$\n", id, order.getFruitName(), order.getQuantity(), order.getPrice(), order.getPrice() * order.getQuantity());
             total += order.getPrice() * order.getQuantity();
+            id++;
         }
-        System.out.println("Total: " + total);
+        System.out.println("Total: " + total+"$");
     }
     
-    public static void viewOrder(Hashtable<String, ArrayList<Order>> ord_ht){
-        for(String name:ord_ht.keySet()){
-            System.out.println("Customer: "+name);
-            ArrayList<Order> ord_list = ord_ht.get(name);
-            displayListOrder(ord_list);
+    public static void displayShopFruit(ArrayList<Fruit> fr_list){
+        System.out.println("List of Fruit: ");
+        System.out.printf("%15s%15s%15s%15s\n", "Item |", "Fruit Name |", "Origin |", "Price");
+        for(Fruit fr : fr_list){
+            System.out.printf("%15d%15s%15s%15.0f\n", fr.getFruitID(), fr.getFr_name(), fr.getOrigin(), fr.getPrice());
         }
     }
     
+    public static boolean checkFruitbyItem(int item, ArrayList<Fruit> fr_list){
+        boolean unavailable=true;
+        for(Fruit fr : fr_list){
+            if(item==fr.getFruitID()){
+                System.out.println("You selected: "+ fr.getFr_name());
+                unavailable=false;
+            }
+        }
+        if(unavailable==true) System.out.println("Invalid ID!");
+        return unavailable;
+    }
     
+    public static boolean inputValidQuantity(int valid_item, ArrayList<Fruit> fr_list, int input_quantity){
+        boolean unsufficient=false;
+        for(Fruit fr : fr_list){
+            if(valid_item==fr.getFruitID()){
+                if(input_quantity>fr.getQuantity()){
+                    System.out.println("Do not have enough "+fr.getFr_name()+" for you!");
+                    unsufficient=true;
+                }
+            }
+        }
+        return unsufficient;
+    }  
 }
