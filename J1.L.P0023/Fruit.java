@@ -53,6 +53,7 @@ public class Fruit {
     }
     
     public void print(){
-        System.out.println(fruitID+"."+fr_name+"\t"+quantity+"\t"+price+"$\t"+price*quantity+"$");
+        System.out.println(fruitID+"."+fr_name+"   "+quantity+"   "+price+"$   "+price*quantity+"$");
     }
 }
+
