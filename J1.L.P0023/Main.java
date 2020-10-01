@@ -14,10 +14,10 @@ public class Main {
                     MnFruitShop.createProduct();
                     break;
                 case 2:
-                    
+                    MnFruitShop.viewOrder();
                     break;
                 case 3:
-                    
+                    MnFruitShop.shopping();
                     break;
                 case 4:
                     System.exit(0);
