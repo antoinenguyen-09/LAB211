@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Order {
     private String fruitName;
     private int quantity;
@@ -38,3 +36,4 @@ public class Order {
         this.price = price;
     }
 }
+
