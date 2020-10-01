@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/**
+ *
+ * @author ASUS
+ */
 public class Menu extends ArrayList<String>{
     public Menu() {
         super();
@@ -33,6 +36,6 @@ public class Menu extends ArrayList<String>{
         return val;
      }
     int getUserChoices(){
-        return getInt("Please enter 1,2,3,4 and 5: ");
+        return getInt("Please enter 1,2,3 and 4: ");
     }
 }
