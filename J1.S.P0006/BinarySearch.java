@@ -52,7 +52,7 @@ public class BinarySearch {
          } while(arr_size<=0);
          int arr[] = new int[arr_size];
          for(int i=0; i<arr.length; i++){
-             arr[i] = Utility.getRandomInRange(30, 10);
+             arr[i] = Utility.getRandomInRange(arr_size, 1);
          }
          bs.sort(arr);
          System.out.println("Sorted array: "+Arrays.toString(arr));
