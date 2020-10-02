@@ -1,9 +1,6 @@
 import java.util.Scanner;
 import java.util.Random;
-/**
- *
- * @author ASUS
- */
+
 public class Utility {
     public static int getPositive(String msg){
         int i = 0;
