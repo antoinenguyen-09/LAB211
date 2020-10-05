@@ -21,9 +21,9 @@ public class Manager {
     
     public static void displayShopFruit(ArrayList<Fruit> fr_list){
         System.out.println("List of Fruit: ");
-        System.out.printf("%15s%15s%15s%15s\n", "Item |", "Fruit Name |", "Origin |", "Price");
+        System.out.printf("%15s%15s%15s%15s%15s\n", "Item |", "Fruit Name |", "Origin |", "Price |", "Quantity");
         for(Fruit fr : fr_list){
-            System.out.printf("%15d%15s%15s%15.0f\n", fr.getFruitID(), fr.getFr_name(), fr.getOrigin(), fr.getPrice());
+            System.out.printf("%15d%15s%15s%15.0f%15d\n", fr.getFruitID(), fr.getFr_name(), fr.getOrigin(), fr.getPrice(), fr.getQuantity());
         }
     }
     
