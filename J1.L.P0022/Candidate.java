@@ -78,4 +78,8 @@ public class Candidate {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public void print() {
+        System.out.println(id+" | "+firstname+" "+lastname+" | "+birthDate+" | "+address+" | "+phone+" | "+email+" | "+typeCandidate);
+    } 
 }
