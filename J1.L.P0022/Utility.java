@@ -48,7 +48,7 @@ public class Utility {
             }
         }while(loop);
         System.out.println();
-        return s;
+        return s.trim();
     }
     
     public static int getInt(String msg){
@@ -85,8 +85,10 @@ public class Utility {
             try
             {
                 i = Integer.parseInt(sc.nextLine());
-                if(i>=1900 && i<=2020)
+                if(i>=1900 && i<=2020){
                    loop = false;
+                   System.out.println("Invalid date!");
+                }
             }
             catch(NumberFormatException e)
             {
@@ -204,12 +206,12 @@ public class Utility {
             try
             {
                 i = Integer.parseInt(sc.nextLine());
-                if(i>=0 && i<=4)
+                if(i>=0 && i<=2)
                    loop = false;
             }
             catch(NumberFormatException e)
             {
-                System.out.println("Invalid type!");
+                System.out.println("Invalid type! Please input from 0 to 2!");
                 sc.nextLine();
             }
         }while(loop);
