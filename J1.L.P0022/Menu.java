@@ -20,7 +20,7 @@ public class Menu extends ArrayList<String>{
             System.out.println(msg);
             try{
               val = Integer.parseInt(sc.nextLine());
-              if((val>=1)&&(val<=4)){
+              if((val>=1)&&(val<=5)){
                     check = true;
               }
               else{
