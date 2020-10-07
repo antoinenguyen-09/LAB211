@@ -13,16 +13,16 @@ public class Main {
             userChoice = mn.getUserChoices();
             switch(userChoice){
                 case 1:
-                    
+                    Manager.createCandidate(userChoice-1);
                     break;
                 case 2:
-                    
+                    Manager.createCandidate(userChoice-1);
                     break;
                 case 3:
-                    
+                    Manager.createCandidate(userChoice-1);
                     break;
                 case 4:
-                    
+                    Manager.searchCandidate();
                     break;
                 case 5:    
                     System.exit(0);
