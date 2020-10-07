@@ -33,6 +33,6 @@ public class Menu extends ArrayList<String>{
         return val;
      }
     int getUserChoices(){
-        return getInt("Please enter 1,2,3 and 4: ");
+        return getInt("Please enter 1,2,3,4 and 5: ");
     }
 }
