@@ -1,9 +1,9 @@
 public class Fresher extends Candidate{
     private int graduate_date;
-    private int graduate_rank;
+    private String graduate_rank;
     private String uni_edu;
 
-    public Fresher(int id, String phone, String firstname, String lastname, String address, int birthDate, int typeCandidate, String email, int graduate_date, int graduate_rank, String uni_edu) {
+    public Fresher(int id, String phone, String firstname, String lastname, String address, int birthDate, int typeCandidate, String email, int graduate_date, String graduate_rank, String uni_edu) {
         super(id, phone, firstname, lastname, address, birthDate, typeCandidate, email);
         this.graduate_date = graduate_date;
         this.graduate_rank = graduate_rank;
@@ -14,7 +14,7 @@ public class Fresher extends Candidate{
         return graduate_date;
     }
 
-    public int getGraduate_rank() {
+    public String getGraduate_rank() {
         return graduate_rank;
     }
 
@@ -26,7 +26,7 @@ public class Fresher extends Candidate{
         this.graduate_date = graduate_date;
     }
 
-    public void setGraduate_rank(int graduate_rank) {
+    public void setGraduate_rank(String graduate_rank) {
         this.graduate_rank = graduate_rank;
     }
 
