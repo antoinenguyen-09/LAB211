@@ -60,7 +60,12 @@ public class Manager {
     
     public static void createFresher(Candidate cnd){
         System.out.println("Input informations of a fresher candiate: ");
-        int graduate_date = Utility.getDate("Enter graduated time: ");
+        int graduate_date;
+        do{
+          graduate_date = Utility.getDate("Enter graduated time: ");
+          if(graduate_date<cnd.getBirthDate())
+                System.out.println("Graduated date must be larger than birth date!");
+        } while(graduate_date<cnd.getBirthDate());
         String graduate_rank = Utility.getRank("Enter rank of graduation: ");
         String uni_edu = Utility.GetString("Enter university graduated from: ", false);
         cnd_list.add(new Fresher(cnd.getId(), cnd.getPhone(), cnd.getFirstname(), cnd.getLastname(), cnd.getAddress(), cnd.getBirthDate(), cnd.getTypeCandidate(), cnd.getEmail(), graduate_date, graduate_rank, uni_edu));
