@@ -85,10 +85,9 @@ public class Utility {
             try
             {
                 i = Integer.parseInt(sc.nextLine());
-                if(i>=1900 && i<=2020){
+                if(i>=1900 && i<=2020)
                    loop = false;
-                   System.out.println("Invalid date!");
-                }
+                else System.out.println("Invalid date!");
             }
             catch(NumberFormatException e)
             {
@@ -165,6 +164,7 @@ public class Utility {
                 i = Integer.parseInt(sc.nextLine());
                 if(i>=0 && i<=100)
                    loop = false;
+                else System.out.println("Year of Experience must be from 0 to 100");
             }
             catch(NumberFormatException e)
             {
