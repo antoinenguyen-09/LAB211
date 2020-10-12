@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Manager {
     static ArrayList<Candidate> cnd_list = new ArrayList<>();
@@ -82,6 +83,12 @@ public class Manager {
     }
     
     public static void displayClassifiedCandidate(){
+        int id=0;
+        String firstname="", lastname="", address="", phone="", email="";
+        int birthDate=0;
+        int typeCandidate=0;
+        Candidate cnd_cmp = new Candidate(id, phone, firstname, lastname, address, birthDate, typeCandidate, email);
+        Collections.sort(cnd_list, cnd_cmp);
         System.out.println("===========EXPERIENCE CANDIDATE============");
         for(Candidate cnd : cnd_list){
             if(cnd instanceof Experience)
@@ -102,6 +109,12 @@ public class Manager {
     
     public static void searchCandidate(){
         displayClassifiedCandidate();
+        int id=0;
+        String firstname="", lastname="", address="", phone="", email="";
+        int birthDate=0;
+        int typeCandidate=0;
+        Candidate cnd_cmp = new Candidate(id, phone, firstname, lastname, address, birthDate, typeCandidate, email);
+        Collections.sort(cnd_list, cnd_cmp);
         String searchName = Utility.GetString("Input Candidate name (First name or Last name): ", false);
         int input_type = Utility.getCandidateType("Input type of candidate: ");
         boolean exist = false;
