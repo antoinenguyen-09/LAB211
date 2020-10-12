@@ -1,4 +1,6 @@
-public class Candidate {
+import java.util.Comparator;
+
+public class Candidate implements Comparator<Candidate>{
     private int id;
     private String firstname, lastname, address, phone, email;
     private int birthDate;
@@ -82,4 +84,10 @@ public class Candidate {
     public void print() {
         System.out.println(id+" | "+firstname+" "+lastname+" | "+birthDate+" | "+address+" | "+phone+" | "+email+" | "+typeCandidate);
     } 
+
+    @Override
+    public int compare(Candidate cnd1, Candidate cnd2) {
+        return cnd1.getFirstname().compareTo(cnd2.getFirstname());
+    }
 }
+
